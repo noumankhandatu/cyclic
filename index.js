@@ -12,13 +12,9 @@ console.log(process.env.CYCLIC_APP_NOUMAN, "process.env.NOUMAN");
 
 // Define a route handler for the root path
 app.get("/", (req, res) => {
-  res.send("Hello, World!  process.env.NOUMAN");
   res.send(
     `Hello, World! ${process.env.CYCLIC_APP_NOUMAN}  process.env.NOUMAN ${process.env.NOUMAN}`
   );
-
-  res.send("Hello, World!" + process.env.NOUMAN);
-  res.send("Hello, World!" + process.env.CYCLIC_APP_NOUMAN);
 });
 
 // Start the server, listening on the specified port
